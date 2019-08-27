@@ -13,4 +13,4 @@ dist/
 *.un~
 smp.txt
 stats.json
-script/templates/www/
+scripts/templates/www
