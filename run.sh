@@ -29,7 +29,7 @@ deleteFolder() {
 
 # 开发，测试环境, 拷贝html目录到静态目录
 copyHtml() {
-    deleteFolder scripts/templates/www
+    ##deleteFolder scripts/templates/www
 	cp -r static scripts/templates/www
 }
 
