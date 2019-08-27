@@ -111,7 +111,7 @@ exports.rules = () => {
                 {
                     loader: "file-loader",
                     query: {
-                        name: "[path][name].[hash].[ext]"
+                        name: "img/[name].[hash].[ext]"
                     },
                 },
             ]

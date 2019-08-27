@@ -19,7 +19,7 @@ module.exports = {
         contentBase: path.resolve(__dirname, '../templates/www'),
         hot: true,
         port: 7305,
-        host: Helper.getIPAdress()
+        host: '0.0.0.0'
     },
     module: {
         noParse: /static\/([\s\S]*.(js|css))/,
@@ -39,6 +39,7 @@ module.exports = {
             allChunks: true
         }),
         new webpack.HotModuleReplacementPlugin(),
+        new webpack.NamedModulesPlugin(),
 		new webpack.optimize.CommonsChunkPlugin({
             names: ['vendor']
         })

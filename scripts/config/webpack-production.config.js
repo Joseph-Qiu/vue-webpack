@@ -36,11 +36,20 @@ let opt = {
     plugins: [
         new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify('production')}),
         new webpack.optimize.ModuleConcatenationPlugin(),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false,
+        // new webpack.optimize.UglifyJsPlugin({
+        //     compress: {
+        //         warnings: false,
+        //     },
+	    //     sourceMap: true
+        // }),
+        new UglifyJsPlugin({
+            uglifyOptions: {
+                compress: {
+                    warnings: false
+                }
             },
-	        sourceMap: true
+            sourceMap: false,
+            parallel: true
         }),
         new webpack.NoEmitOnErrorsPlugin(),
         new TransferWebpackPlugin([{from: 'www'}], path.resolve(__dirname, '../templates')),

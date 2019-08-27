@@ -4,7 +4,6 @@ const fs = require('fs');
 
 // 获取指定目录下的文件夹名字
 exports.getFolderName = (p) => {
-    console.log(p)
   let names = [];
   const files = fs.readdirSync(p);
   files.forEach((item, index) => {

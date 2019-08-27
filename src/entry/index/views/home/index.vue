@@ -17,6 +17,11 @@
         </div>
 
         <div id="main"></div>
+
+        <div class="webkit-box flex-center">
+            <div class="images"></div>
+            <img src="~src/common/img/logo.png" width="60px" />
+        </div>
     </div>
 </template>
 

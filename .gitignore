@@ -11,3 +11,6 @@ dist/
 .DS_Store
 *.sw*
 *.un~
+smp.txt
+stats.json
+script/templates/www/

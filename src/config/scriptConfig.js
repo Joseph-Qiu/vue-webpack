@@ -36,3 +36,6 @@ exports.linkArr = [
 exports.metaArr = [
     
 ];
+
+// webpack模块统计分析
+exports.analyzer = false
