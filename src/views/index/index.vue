@@ -15,6 +15,7 @@
         </el-option>
       </el-select>
       <el-button type="primary" @click="handleToUser"><i class="el-icon-search"></i>用户中心</el-button>
+      <el-button type="primary" @click="handleToDetail"><i class="el-icon-search"></i>详情页</el-button>
     </div>
 
     <div id="main"></div>

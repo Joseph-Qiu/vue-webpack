@@ -61,6 +61,11 @@ const ViewModule = {
             this.$router.push({
                 name: 'user'
             });
+        },
+        handleToDetail () {
+            this.$router.push({
+                name: 'detail'
+            });
         }
     }
 };

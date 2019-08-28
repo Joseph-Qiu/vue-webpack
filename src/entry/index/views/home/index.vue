@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="title">
-      index-home-{{ENV}}-多页面应用
+      index-home-{{ENV}}-多页面应用-更新
     </div>
     <div class="element-ui">
       <span class="on">{{value}}</span>

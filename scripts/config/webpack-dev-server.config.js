@@ -35,7 +35,7 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: "[name].css", // [contenthash:8]
+            filename: "[name].css",
             allChunks: true
         }),
         new webpack.HotModuleReplacementPlugin(),
