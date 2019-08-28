@@ -17,4 +17,4 @@
 
 ### eslint
     默认开启eslint
-    跳过eslint检查，git commit -no-verify
+    跳过eslint检查，git commit --no-verify -m "commit"
