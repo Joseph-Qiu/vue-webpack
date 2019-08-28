@@ -1,8 +1,8 @@
 // import 'babel-polyfill';
 import 'lib-flexible';
 import Vue from 'vue';
-import router from './router'
-import "src/common/less/common.less";
+import router from './router';
+import 'src/common/less/common.less';
 
 import ElementUI from 'element-ui';
 Vue.use(ElementUI);

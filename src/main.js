@@ -1,3 +1,4 @@
+// import 'babel-polyfill';
 import 'lib-flexible';
 import Vue from 'vue';
 import router from './router';
@@ -11,7 +12,7 @@ Vue.use(ElementUI);
 
 Vue.config.productionTip = false;
 store.state.router = router;
-Vue.prototype.xxxx = 1;
+Vue.prototype.xxxx = 3;
 
 new Vue({
     el: '#app',

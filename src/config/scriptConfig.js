@@ -1,7 +1,7 @@
 exports.vendor = ['vue', 'vuex', 'vue-router', 'element-ui', 'echarts', 'babel-polyfill'];
 
 // 是否开启多页面 {false|true}
-exports.multiple = true;
+exports.multiple = false;
 
 // 运行端环境 {''|pc}
 exports.packageEnv = 'pc';
