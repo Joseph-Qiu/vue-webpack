@@ -5,6 +5,7 @@
 </template>
 
 <script>
+a = 1
 export default {
     name: 'app',
     data() {
