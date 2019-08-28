@@ -23,6 +23,10 @@
         "pre-commit": "lint-staged"
       }
     },
+    "files": [
+        "index.js",
+        "vue.js"
+    ],
     "private": true,
     "devDependencies": {
       "autoprefixer": "7.1.2",
