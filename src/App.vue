@@ -22,6 +22,7 @@ export default {
     computed: {
     },
     created () {
+        console.log(1)
     },
     mounted () {
     },
