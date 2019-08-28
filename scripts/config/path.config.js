@@ -1,5 +1,5 @@
 
-exports.outputPath = 'product';
+exports.outputPath = 'dev';
 
 exports.publicPath = './';
 
@@ -9,7 +9,7 @@ exports.projectType = '{projectType}';
 
 exports.title = '';
 
-exports.env = 'product';
+exports.env = 'dev';
 
 exports.cdnPath = '//s1.huishoubao.com/';
 

@@ -6,21 +6,21 @@
 
 <script>
 export default {
-    name: 'app',
-    data() {
-        return {
-        }
-    },
-    created() {
-    },
-    mounted() {
-    },
-    computed: {
-    },
-    methods: {
-    },
-    components: {
+  name: 'app',
+  data () {
+    return {
     }
+  },
+  created () {
+  },
+  mounted () {
+  },
+  computed: {
+  },
+  methods: {
+  },
+  components: {
+  }
 }
 </script>
 

@@ -9,10 +9,32 @@
   "scripts": {
     "dev": "webpack-dev-server --config scripts/config/webpack-dev-server.config.js --progress --inline --colors --hot",
     "build": "webpack --config scripts/config/webpack-production.config.js --colors",
-    "watch": "webpack -w --config scripts/config/webpack-production.config.js --progress --colors"
+    "watch": "webpack -w --config scripts/config/webpack-production.config.js --progress --colors",
+    "lint": "eslint --ext .js,.vue src/App.vue"
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "private": true,
   "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^4.0.0",
     "autoprefixer": "7.1.2",
     "babel-cli": "6.26.0",
     "babel-core": "6.26.3",
@@ -22,7 +44,6 @@
     "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.1",
     "css-loader": "0.28.11",
-    "eslint-config-hsb": "0.2.8",
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "1.1.11",
     "happypack": "5.0.1",
