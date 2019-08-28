@@ -1,5 +1,8 @@
 <template>
   <div id="demo">
+    <span 
+      v-for="item in kk" 
+      :key="item">{{ item }}</span>
     <router-view />
   </div>
 </template>
@@ -10,7 +13,9 @@ export default {
     components: {
     },
     data () {
-        return {}
+        return {
+            kk: [1, 3]
+        }
     },
     computed: {
     },
