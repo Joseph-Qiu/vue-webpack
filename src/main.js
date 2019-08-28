@@ -1,23 +1,27 @@
-// import 'babel-polyfill';
-import 'lib-flexible';
-import Vue from 'vue';
+import 'lib-flexible'
+import Vue from 'vue'
 import router from './router'
-import "src/common/less/common.less";
+import 'src/common/less/common.less'
 
-import ElementUI from 'element-ui';
-Vue.use(ElementUI);
+import ElementUI from 'element-ui'
 
-import App from './App.vue';
-import store from './store';
+import App from './App.vue'
+import store from './store'
+Vue.use(ElementUI)
 
-Vue.config.productionTip = false;
-store.state.router = router;
+Vue.config.productionTip = false
+store.state.router = router
 Vue.prototype.xxxx = 1
 
-new Vue({
+/* eslint-disable no-new */
+let vm = new Vue({
     el: '#app',
     store,
     router,
-    template: '<App/>',
-    components: { App }
-});
+    components: { App },
+    template: '<App/>'
+})
+
+Vue.use({
+    vm
+})

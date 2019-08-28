@@ -1,26 +1,26 @@
 <template>
-    <div id='demo'>
-        <router-view></router-view>
-    </div>
+  <div id="demo">
+    <router-view />
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'app',
-  data () {
-    return {
+    name: 'App',
+    components: {
+    },
+    data () {
+        return {}
+    },
+    computed: {
+    },
+    created () {
+    },
+    mounted () {
+    },
+
+    methods: {
     }
-  },
-  created () {
-  },
-  mounted () {
-  },
-  computed: {
-  },
-  methods: {
-  },
-  components: {
-  }
 }
 </script>
 
