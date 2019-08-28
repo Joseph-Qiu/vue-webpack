@@ -22,6 +22,7 @@
     "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.1",
     "css-loader": "0.28.11",
+    "eslint-config-hsb": "0.2.8",
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "1.1.11",
     "happypack": "5.0.1",
