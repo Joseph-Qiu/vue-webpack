@@ -32,18 +32,18 @@ module.exports = {
     // add your custom rules here
     //it is base on https://github.com/vuejs/eslint-config-vue
     rules: {
-        'vue/html-end-tags': 2,
-		'vue/html-indent': 2,
+        'vue/html-end-tags': 4,
+		'vue/html-indent': 4,
 		'vue/max-attributes-per-line': [2, {
-			'singleline': 3
+			'singleline': 4
 		}],
-		'vue/multiline-html-element-content-newline': 2,
-		'vue/no-multi-spaces': 2,
-		'vue/no-spaces-around-equal-signs-in-attribute': 2,
-		'vue/no-template-shadow': 2,
-		'vue/prop-name-casing': 2,
-		'vue/require-prop-types': 2,
-		'vue/this-in-template': 2,
+		'vue/multiline-html-element-content-newline': 4,
+		'vue/no-multi-spaces': 4,
+		'vue/no-spaces-around-equal-signs-in-attribute': 4,
+		'vue/no-template-shadow': 4,
+		'vue/prop-name-casing': 4,
+		'vue/require-prop-types': 4,
+		'vue/this-in-template': 4,
         /**
          * 禁止 for 循环出现方向错误的循环
          * @category Possible Errors
