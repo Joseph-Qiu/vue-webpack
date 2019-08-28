@@ -1,7 +1,8 @@
 <template>
   <div class="demo">
     <router-view />
-</div></template>
+  </div>
+</template>
 
 <script>
 export default {
@@ -17,8 +18,6 @@ export default {
     computed: {
     },
     created () {
-        console.log(1);
-        alert(1);
     },
     mounted () {
     },
