@@ -21,6 +21,11 @@ module.exports = {
     // add your custom rules here
     //it is base on https://github.com/vuejs/eslint-config-vue
     rules: {
-
+        // allow async-await
+      "no-console": "off",
+      'generator-star-spacing': 'off',
+      "indent": [2, 4],
+      "no-trailing-spaces": "off",
+      "no-new": "off"
     }
 }
