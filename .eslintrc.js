@@ -1,6 +1,6 @@
 module.exports = {
     root: true,
-    extends: ['plugin:vue/essential', './eslintBase.js'],
+    extends: ['plugin:vue/essential', './.eslintrcbase.js'],
 	parser: 'vue-eslint-parser',
 	parserOptions: {
 		// 设置 js 的解析器为 babel-eslint
