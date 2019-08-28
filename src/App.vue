@@ -1,11 +1,6 @@
 <template>
   <div class="demo">
     <router-view />
-    ddddd
-    <div v-for="item in kk" :key="item">
-      {{item}}
-      <span></span>
-    </div>
   </div>
 </template>
 
@@ -16,14 +11,9 @@ export default {
     },
     data () {
         return {
-            kk: [1, 2]
         }
     },
     props: {
-        a: {
-            type: String,
-            default: ''
-        }
     },
     computed: {
     },
