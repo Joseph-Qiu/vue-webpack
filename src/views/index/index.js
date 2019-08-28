@@ -1,34 +1,34 @@
-import {mapState} from 'vuex';
+import {mapState} from 'vuex'
 import echarts from 'echarts'
 
-const ViewModule =  {
+const ViewModule = {
     name: 'Home',
-    data() {
-		return {
-            value: "",
+    data () {
+        return {
+            value: '',
             options: [{
                 value: '黄金糕',
                 label: '黄金糕'
-              }, {
+            }, {
                 value: '双皮奶',
                 label: '双皮奶'
-              }, {
+            }, {
                 value: '蚵仔煎',
                 label: '蚵仔煎'
-              }, {
+            }, {
                 value: '龙须面',
                 label: '龙须面'
-              }, {
+            }, {
                 value: '北京烤鸭',
                 label: '北京烤鸭'
             }]
-        };
-	},
-    created() {
+        }
+    },
+    created () {
         document.title = '首页'
     },
-    mounted() {
-        var myChart = echarts.init(document.getElementById('main'));
+    mounted () {
+        var myChart = echarts.init(document.getElementById('main'))
         myChart.setOption({
             title: {
                 text: 'ECharts 入门示例'
@@ -43,18 +43,18 @@ const ViewModule =  {
                 type: 'bar',
                 data: [5, 20, 36, 10, 10, 20]
             }]
-        });
+        })
     },
     computed: Object.assign({
-        }, mapState({
-            ENV: (state) => state.ENV
-        })
+    }, mapState({
+        ENV: (state) => state.ENV
+    })
     ),
     components: {
        
     },
     methods: {
-        handleToUser() {
+        handleToUser () {
             this.$router.push({
                 name: 'user'
             })
@@ -62,4 +62,4 @@ const ViewModule =  {
     }
 }
 
-export default ViewModule;
+export default ViewModule
