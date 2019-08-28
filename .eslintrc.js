@@ -27,7 +27,8 @@ module.exports = {
         'vue'
     ],
     // add your custom rules here
-    //it is base on https://github.com/vuejs/eslint-config-vue
+    // it is base on https://github.com/vuejs/eslint-config-vue
+    // https://eslint.vuejs.org/rules/multiline-html-element-content-newline.html
     rules: {
         'vue/html-end-tags': 2,
 		'vue/html-indent': 2,

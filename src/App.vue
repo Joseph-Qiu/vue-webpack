@@ -19,6 +19,12 @@ export default {
             kk: [1, 2]
         }
     },
+    props: {
+        a: {
+            type: String,
+            default: ''
+        }
+    },
     computed: {
     },
     created () {

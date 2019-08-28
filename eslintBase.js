@@ -67,7 +67,7 @@ module.exports = {
          * @category Possible Errors
          * @reason console 的使用很常见
          */
-        'no-console': 1,
+        'no-console': "off",
         /**
          * 禁止将常量作为分支条件判断中的测试表达式，但允许作为循环条件判断中的测试表达式
          * @category Possible Errors
