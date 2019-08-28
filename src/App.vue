@@ -2,7 +2,10 @@
   <div class="demo">
     <router-view />
     ddddd
-    <div v-for="item in kk" :key="item">{{item}}</div>
+    <div v-for="item in kk" :key="item">
+      {{item}}
+      <span></span>
+    </div>
   </div>
 </template>
 
