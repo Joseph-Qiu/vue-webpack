@@ -37,8 +37,8 @@ module.exports = {
 		}],
 		//'vue/multiline-html-element-content-newline': 2,
 		'vue/no-multi-spaces': 2,
-		//'vue/no-spaces-around-equal-signs-in-attribute': 2,
-		//'vue/no-template-shadow': 2,
+		'vue/no-spaces-around-equal-signs-in-attribute': 2,
+		'vue/no-template-shadow': 2,
 		'vue/prop-name-casing': 2,
 		'vue/require-prop-types': 2,
 		'vue/this-in-template': 2
