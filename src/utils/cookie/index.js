@@ -2,7 +2,7 @@
 class Cookie {
 
     constructor() {
-        this.init();
+        this.init()
     }
 
     init () {
@@ -28,8 +28,10 @@ class Cookie {
     }
 
     getCookie (name) {
-        var arr, reg = new RegExp("(^| )"+name+"=([^;]*)(;|$)");
-        if (arr = document.cookie.match(reg)) {
+        let reg = new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        let arr = document.cookie.match(reg)
+        
+        if (arr) {
             return arr[2];
         } else {
             return false;
@@ -46,7 +48,7 @@ class Cookie {
     }
 
     setCookie (name, value, time) {
-        var time = time || (1 * 24 * 60 * 60 * 1000);
+        time = time || (1 * 24 * 60 * 60 * 1000);
         var exp = new Date();
         exp.setTime(exp.getTime() + time);
         document.cookie = name + "=" + value + ";expires=" + exp.toGMTString() + ";path=/";
