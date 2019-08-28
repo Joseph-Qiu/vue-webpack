@@ -3,6 +3,7 @@
     <span 
       v-for="item in kk" 
       :key="item">{{ item }}</span>
+    {{ str }}
     <router-view />
   </div>
 </template>
@@ -14,12 +15,14 @@ export default {
     },
     data () {
         return {
-            kk: [1, 3]
+            kk: [1, 3],
+            str: ""
         }
     },
     computed: {
     },
     created () {
+        this.str = `${this.kk}`
     },
     mounted () {
     },
