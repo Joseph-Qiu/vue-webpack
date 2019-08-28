@@ -1,92 +1,87 @@
 {
-    "name": "front",
-    "version": "1.0.0",
-    "description": "front platform",
-    "repository": {
-      "type": "git",
-      "url": ""
+    "name":"front",
+    "version":"1.0.0",
+    "description":"front platform",
+    "repository":{
+        "type":"git",
+        "url":""
     },
-    "scripts": {
-      "dev": "webpack-dev-server --config scripts/config/webpack-dev-server.config.js --progress --inline --colors --hot",
-      "build": "webpack --config scripts/config/webpack-production.config.js --colors",
-      "watch": "webpack -w --config scripts/config/webpack-production.config.js --progress --colors",
-      "lint": "eslint --ext .js,.vue src"
+    "scripts":{
+        "dev":"webpack-dev-server --config scripts/config/webpack-dev-server.config.js --progress --inline --colors --hot",
+        "build":"webpack --config scripts/config/webpack-production.config.js --colors",
+        "watch":"webpack -w --config scripts/config/webpack-production.config.js --progress --colors",
+        "lint":"eslint --ext .js,.vue src"
     },
-    "lint-staged": {
-      "src/**/*.{js,vue}": [
-        "eslint --fix",
-        "git add"
-      ]
+    "lint-staged":{
+        "src/**/*.{js,vue}":[
+            "eslint --fix",
+            "git add"
+        ]
     },
-    "husky": {
-      "hooks": {
-        "pre-commit": "lint-staged"
-      }
+    "husky":{
+        "hooks":{
+            "pre-commit":"lint-staged"
+        }
     },
-    "files": [
-        "index.js",
-        "vue.js"
-    ],
-    "private": true,
-    "devDependencies": {
-      "autoprefixer": "7.1.2",
-      "babel-cli": "6.26.0",
-      "babel-core": "6.26.3",
-      "babel-eslint": "^8.2.1",
-      "babel-loader": "7.1.5",
-      "babel-plugin-syntax-dynamic-import": "6.18.0",
-      "babel-polyfill": "6.26.0",
-      "babel-preset-env": "1.7.0",
-      "babel-preset-react": "6.24.1",
-      "css-loader": "0.28.11",
-      "eslint": "^5.16.0",
-      "eslint-config-standard": "^10.2.1",
-      "eslint-friendly-formatter": "^3.0.0",
-      "eslint-loader": "^1.7.1",
-      "eslint-plugin-import": "^2.7.0",
-      "eslint-plugin-node": "^5.2.0",
-      "eslint-plugin-promise": "^3.4.0",
-      "eslint-plugin-standard": "^3.0.1",
-      "eslint-plugin-vue": "^5.2.3",
-      "extract-text-webpack-plugin": "3.0.2",
-      "file-loader": "1.1.11",
-      "happypack": "5.0.1",
-      "husky": "^3.0.4",
-      "less": "2.7.3",
-      "less-loader": "4.1.0",
-      "lint-staged": "^9.2.5",
-      "postcss-loader": "3.0.0",
-      "prop-types": "15.7.2",
-      "px2rem-loader": "0.1.9",
-      "react": "15.6.2",
-      "react-dom": "15.6.2",
-      "react-redux": "5.1.1",
-      "react-router": "2.8.1",
-      "redux": "3.7.2",
-      "redux-thunk": "2.3.0",
-      "speed-measure-webpack-plugin": "1.3.1",
-      "style-loader": "0.19.1",
-      "transfer-webpack-plugin": "0.1.4",
-      "uglifyjs-webpack-plugin": "1.3.0",
-      "vue": "2.6.10",
-      "vue-loader": "13.7.3",
-      "vue-router": "3.0.2",
-      "vue-style-loader": "3.1.2",
-      "vue-template-compiler": "2.6.10",
-      "vuex": "3.1.0",
-      "webpack": "3.12.0",
-      "webpack-bundle-analyzer": "3.3.2",
-      "webpack-dev-server": "2.11.5",
-      "webpack-manifest-plugin": "1.3.2",
-      "webpack-parallel-uglify-plugin": "1.1.0"
+    "private":true,
+    "devDependencies":{
+        "autoprefixer":"7.1.2",
+        "babel-cli":"6.26.0",
+        "babel-core":"6.26.3",
+        "babel-eslint":"8.2.6",
+        "babel-loader":"7.1.5",
+        "babel-plugin-syntax-dynamic-import":"6.18.0",
+        "babel-polyfill":"6.26.0",
+        "babel-preset-env":"1.7.0",
+        "babel-preset-react":"6.24.1",
+        "css-loader":"0.28.11",
+        "eslint":"5.16.0",
+        "eslint-config-standard":"10.2.1",
+        "eslint-friendly-formatter":"3.0.0",
+        "eslint-loader":"1.9.0",
+        "eslint-plugin-import":"2.18.2",
+        "eslint-plugin-node":"5.2.1",
+        "eslint-plugin-promise":"3.8.0",
+        "eslint-plugin-standard":"3.1.0",
+        "eslint-plugin-vue":"5.2.3",
+        "extract-text-webpack-plugin":"3.0.2",
+        "file-loader":"1.1.11",
+        "happypack":"5.0.1",
+        "husky":"3.0.4",
+        "less":"2.7.3",
+        "less-loader":"4.1.0",
+        "lint-staged":"9.2.5",
+        "postcss-loader":"3.0.0",
+        "prop-types":"15.7.2",
+        "px2rem-loader":"0.1.9",
+        "react":"15.6.2",
+        "react-dom":"15.6.2",
+        "react-redux":"5.1.1",
+        "react-router":"2.8.1",
+        "redux":"3.7.2",
+        "redux-thunk":"2.3.0",
+        "speed-measure-webpack-plugin":"1.3.1",
+        "style-loader":"0.19.1",
+        "transfer-webpack-plugin":"0.1.4",
+        "uglifyjs-webpack-plugin":"1.3.0",
+        "vue":"2.6.10",
+        "vue-loader":"13.7.3",
+        "vue-router":"3.0.2",
+        "vue-style-loader":"3.1.2",
+        "vue-template-compiler":"2.6.10",
+        "vuex":"3.1.0",
+        "webpack":"3.12.0",
+        "webpack-bundle-analyzer":"3.3.2",
+        "webpack-dev-server":"2.11.5",
+        "webpack-manifest-plugin":"1.3.2",
+        "webpack-parallel-uglify-plugin":"1.1.0"
     },
-    "dependencies": {
-      "axios": "0.18.1",
-      "echarts": "4.2.1",
-      "element-ui": "2.11.1",
-      "html2canvas": "1.0.0-rc.3",
-      "lib-flexible": "0.3.2",
-      "mint-ui": "2.2.13"
+    "dependencies":{
+        "axios":"0.18.1",
+        "echarts":"4.2.1",
+        "element-ui":"2.11.1",
+        "html2canvas":"1.0.0-rc.3",
+        "lib-flexible":"0.3.2",
+        "mint-ui":"2.2.13"
     }
-  }
-  
+}
