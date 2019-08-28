@@ -2,15 +2,18 @@ const path = require('path');
 const Helper = require('../config/helper');
 const buildAction = require('./buildAction').buildAction;
 const {publicPath, env, title, cdnPath} = require('../config/path.config');
+const pathConfig = require('../config')[env] || {};
+
 let manifest = null
 let devEnv = '';
 let relyOnStyle = '';
 let random = Date.now();
 let src = path.resolve(__dirname, '../../src');
+let buildPath = pathConfig.assetsRoot ? pathConfig.assetsRoot : path.resolve(__dirname, `../../dist`);
 
 if (env !== 'dev') {
     try {
-        manifest = require('../../dist/manifest.json')
+        manifest = require(`${buildPath}/manifest.json`)
     } catch(err) {}
 }
 
@@ -58,7 +61,7 @@ let createRelyOn = (arr = [], prefix = '', type = 'script') => {
 
 // 生成html
 let generatedHtml = (outEnv = '', outHtmlName = 'index') => {
-    let out = `dist/${outHtmlName}.html`
+    let out = `${buildPath}/${outHtmlName}.html`
     if (env === 'dev') {
         out = `scripts/templates/www/${outHtmlName}.html`
     }

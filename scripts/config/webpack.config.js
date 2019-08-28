@@ -1,9 +1,10 @@
 const path = require('path');
 const fs = require("fs");
+const os = require('os')
+
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const HappyPack = require('happypack');
-const os = require('os')
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length })
 const StatsPlugin = require('./plugins/stats');
 

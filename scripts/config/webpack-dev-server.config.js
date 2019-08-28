@@ -3,6 +3,7 @@ const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const Helper = require('./helper');
+const pathConfig = require('../config').dev;
 const webpackConfig = require('./webpack.config');
 const buildPath = path.resolve(__dirname, '../../dist');
 
@@ -18,8 +19,10 @@ module.exports = {
     devServer: {
         contentBase: path.resolve(__dirname, '../templates/www'),
         hot: true,
-        port: 7305,
-        host: '0.0.0.0'
+        port: pathConfig.port || 9527,
+        host: pathConfig.host || '0.0.0.0',
+        //publicPath: buildPath,
+        proxy: pathConfig.proxyTable,
     },
     module: {
         noParse: /static\/([\s\S]*.(js|css))/,

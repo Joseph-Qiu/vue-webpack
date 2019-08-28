@@ -9,9 +9,10 @@ const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 
 const {publicPath, env} = require('./path.config');
 const webpackConfig = require('./webpack.config');
-let buildPath = path.resolve(__dirname, '../../dist');
-let oEntry = webpackConfig.entry()
+const pathConfig = require('../config')[env] || {};
 
+let buildPath = pathConfig.assetsRoot ? pathConfig.assetsRoot : path.resolve(__dirname, `../../dist`);
+let oEntry = webpackConfig.entry()
 let getChunks = () => {
     let multiple = !webpackConfig.scriptConfig;
     let o = JSON.parse(JSON.stringify(oEntry))
@@ -23,7 +24,7 @@ let getChunks = () => {
 
 let opt = {    
     entry: oEntry,
-	devtool: '', // cheap-module-source-map
+	devtool: '',
     output: {
         path: buildPath,
         publicPath: publicPath || "/",

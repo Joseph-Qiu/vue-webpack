@@ -1,16 +1,6 @@
-
-exports.outputPath = '{outputPath}';
-
 exports.publicPath = '{publicPath}';
-
-exports.project = '{project}';
-
-exports.projectType = '{projectType}';
-
-exports.title = '{title}';
-
-exports.env = '{outputPath}';
-
+exports.env = '{env}';
 exports.cdnPath = '{cdnPath}';
-
 exports.version = '{version}';
+exports.assetsRoot = '{assetsRoot}';
+exports.title = '{title}';

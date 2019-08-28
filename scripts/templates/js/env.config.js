@@ -1,14 +1,12 @@
 
-const apiHost = '{apiHost}';
 const publicPath = '{publicPath}';
-const imgPublicPath = '{imgPublicPath}';
-const env = '{outputPath}';
-const project = '{project}';
+const env = '{env}';
+const cdnPath = '{cdnPath}';
+const version = '{version}';
 
 export {
-    apiHost,
     publicPath,
-    imgPublicPath,
     env,
-    project
+    cdnPath,
+    version
 };
