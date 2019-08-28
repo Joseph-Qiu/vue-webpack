@@ -13,3 +13,8 @@
 
 - 单页面
     - 根目录main.js入口
+
+
+### eslint
+    默认开启eslint
+    跳过eslint检查，git commit -no-verify

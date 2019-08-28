@@ -12,7 +12,7 @@ Vue.use(ElementUI)
 Vue.config.productionTip = false
 store.state.router = router
 Vue.prototype.xxxx = 1
-
+a = 1
 new Vue({
     el: '#app',
     store,
