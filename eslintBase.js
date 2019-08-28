@@ -1361,7 +1361,7 @@ module.exports = {
          * @fixable
          */
         semi: [
-        0,
+        'error',
         'always',
         {
             omitLastInOneLineBlock: true
