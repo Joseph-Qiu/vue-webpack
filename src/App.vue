@@ -5,6 +5,10 @@
 </template>
 
 <script>
+let a = () => {
+    console.log(1)
+}
+a()
 export default {
     name: 'App',
     components: {
