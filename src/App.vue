@@ -11,7 +11,15 @@ export default {
     },
     data () {
         return {
-            dd:1
+            // xxx
+            dd: 1,
+
+            name: "11", //xxx
+
+            /**
+             * sadfsdaf
+             */
+            data: {}
         }
     },
     computed: {

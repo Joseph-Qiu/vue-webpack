@@ -24,7 +24,7 @@ module.exports = {
         // allow async-await
       "no-console": "off",
       'generator-star-spacing': 'off',
-      "indent": [2, 4],
+      "indent": [2, 4], // 第一个参数是错误级别0,1,2, 第二个是几个空格
       "no-trailing-spaces": "off",
       "no-new": "off"
     }
