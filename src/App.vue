@@ -1,8 +1,9 @@
 <template>
   <div class="demo">
     <router-view />
-  </div>
-</template>
+    <div>
+    </div>
+</div></template>
 
 <script>
 export default {
@@ -11,21 +12,21 @@ export default {
     },
     data () {
         return {
-        }
+        };
     },
     props: {
     },
     computed: {
     },
     created () {
-        console.log(1)
+        console.log(1);
     },
     mounted () {
     },
 
     methods: {
     }
-}
+};
 </script>
 
 <style scoped>
