@@ -4,7 +4,7 @@ exports.vendor = ['vue', 'vuex', 'vue-router', 'element-ui', 'echarts', 'babel-p
 exports.multiple = true;
 
 // 运行端环境 {''|pc}
-exports.packageEnv = 'pc'
+exports.packageEnv = 'pc';
 
 // 是否开启rem {false|true}
 exports.px2rem = false;
@@ -38,4 +38,4 @@ exports.metaArr = [
 ];
 
 // webpack模块统计分析
-exports.analyzer = false
+exports.analyzer = false;
