@@ -84,6 +84,7 @@ let generatedHtml = (outEnv = '', outHtmlName = 'index') => {
 let beforeHtml = (p, file = [], type) => {
     file = typeof file === 'object' ? file : [file]
     file.forEach(item => {
+        if (!item) return
         if (type === 'css') {
             relyOnStyle += `<link rel="stylesheet" href="${p}${item}">`
         } 
@@ -105,7 +106,7 @@ let init = () => {
                 beforeHtml(publicPath, ['js/vendor.js', `js/${nameJs}`], 'js');
             } else {
                 beforeHtml(publicPath, [manifest['vendor.css'], manifest[nameCss]], 'css');
-			    beforeHtml(publicPath, [manifest['vendor.js'], manifest[nameJs]], 'js');
+			    beforeHtml(publicPath, [manifest['runtime.js'], manifest['common.js'], manifest['vendor.js'], manifest[nameJs]], 'js');
             }
 			generatedHtml(packageEnv, names[i]);
 		}
@@ -115,7 +116,7 @@ let init = () => {
             beforeHtml(publicPath, ['js/vendor.js', 'js/app.js'], 'js');
         } else {
             beforeHtml(publicPath, manifest['app.css'], 'css');
-            beforeHtml(publicPath, [manifest['vendor.js'], manifest['app.js']], 'js');
+            beforeHtml(publicPath, [manifest['runtime.js'], manifest['common.js'], manifest['vendor.js'], manifest['app.js']], 'js');
         }
 		generatedHtml(packageEnv);
 	}

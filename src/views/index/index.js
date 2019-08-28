@@ -1,5 +1,7 @@
-import {mapState} from 'vuex'
-import echarts from 'echarts'
+import { mapState } from 'vuex';
+import echarts from 'echarts';
+import Storage from 'utils/storage';
+import Cookie from 'utils/cookie';
 
 const ViewModule = {
     name: 'Home',
@@ -22,13 +24,15 @@ const ViewModule = {
                 value: '北京烤鸭',
                 label: '北京烤鸭'
             }]
-        }
+        };
     },
     created () {
-        document.title = '首页'
+        document.title = '首页';
+        Storage.add('index', '2');
+        Cookie.setCookie('cookie-index', '1');
     },
     mounted () {
-        var myChart = echarts.init(document.getElementById('main'))
+        let myChart = echarts.init(document.getElementById('main'));
         myChart.setOption({
             title: {
                 text: 'ECharts 入门示例'
@@ -43,13 +47,12 @@ const ViewModule = {
                 type: 'bar',
                 data: [5, 20, 36, 10, 10, 20]
             }]
-        })
+        });
     },
     computed: Object.assign({
     }, mapState({
         ENV: (state) => state.ENV
-    })
-    ),
+    })),
     components: {
        
     },
@@ -57,9 +60,9 @@ const ViewModule = {
         handleToUser () {
             this.$router.push({
                 name: 'user'
-            })
+            });
         }
     }
-}
+};
 
-export default ViewModule
+export default ViewModule;

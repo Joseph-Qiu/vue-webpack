@@ -1,4 +1,4 @@
-
+import Storage from 'utils/storage';
 const ViewModule =  {
     name: 'Home',
     data () {
@@ -10,7 +10,7 @@ const ViewModule =  {
        
     },
     created () {
-
+        Storage.add('detail', '1');
     },
     computed: {},
     beforeRouteEnter (to, from, next) {

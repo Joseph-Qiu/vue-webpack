@@ -10,16 +10,26 @@ const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 const {publicPath, env} = require('./path.config');
 const webpackConfig = require('./webpack.config');
 let buildPath = path.resolve(__dirname, '../../dist');
+let oEntry = webpackConfig.entry()
+
+let getChunks = () => {
+    let multiple = !webpackConfig.scriptConfig;
+    let o = JSON.parse(JSON.stringify(oEntry))
+    delete o.vendor
+    o = Object.keys(o)
+    if (multiple) return o
+    return o.join()
+}
 
 let opt = {    
-    entry: webpackConfig.entry(),
+    entry: oEntry,
 	devtool: '', // cheap-module-source-map
     output: {
         path: buildPath,
         publicPath: publicPath || "/",
         filename: "js/[name].[chunkhash].js",
         chunkFilename: "js/[name].[chunkhash].js",
-	    sourceMapFilename: "map/[name].js.map"
+	    // sourceMapFilename: "map/[name].js.map"
     },
     module: {
         noParse: /static\/([\s\S]*.(js|css))/,
@@ -53,8 +63,19 @@ let opt = {
         new TransferWebpackPlugin([{from: 'www'}], path.resolve(__dirname, '../templates')),
         new ManifestPlugin({fileName: 'manifest.json'}),
         new webpack.optimize.CommonsChunkPlugin({
-            names: ['vendor']
+            name: ['vendor', 'runtime'],
+            filename: 'js/[name].[chunkhash].js',
+            minChunks: Infinity
         }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'common',
+            filename: 'js/[name].[chunkhash].js',
+            chunks: getChunks()
+        })
+
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     names: ['vendor']
+        // }),
         // new webpack.optimize.CommonsChunkPlugin({
         //     name: 'vendor',
         //     minChunks (module) {
