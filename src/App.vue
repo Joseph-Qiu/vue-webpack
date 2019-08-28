@@ -1,5 +1,5 @@
 <template>
-  <div id="demo">
+  <div class="demo">
     <router-view />
   </div>
 </template>
@@ -11,6 +11,7 @@ export default {
     },
     data () {
         return {
+            kk: [1, 2]
         }
     },
     computed: {
@@ -26,7 +27,7 @@ export default {
 </script>
 
 <style scoped>
-#demo{
+.demo{
     font-size: 16px;
     padding: 20px;
 }
