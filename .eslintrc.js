@@ -23,17 +23,9 @@ module.exports = {
         commonjs: true,
         es6: true
     },
-    // extends: [
-    //     'plugin:vue/essential', 
-    //     // 'plugin:vue/strongly-recommended',
-    //     // 'plugin:vue/recommended',
-    //     'eslint:recommended',
-    //     './base.js'
-    // ],
     plugins: [
         'vue'
     ],
-  
     // add your custom rules here
     //it is base on https://github.com/vuejs/eslint-config-vue
     rules: {
@@ -50,4 +42,11 @@ module.exports = {
 		'vue/require-prop-types': 2,
 		'vue/this-in-template': 2
     }
+    // extends: [
+    //     'plugin:vue/essential', 
+    //     // 'plugin:vue/strongly-recommended',
+    //     // 'plugin:vue/recommended',
+    //     'eslint:recommended',
+    //     './base.js'
+    // ]
 }

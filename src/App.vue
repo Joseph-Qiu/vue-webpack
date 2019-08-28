@@ -1,6 +1,7 @@
 <template>
   <div class="demo">
     <router-view />
+    <div v-for="item in kk" :key="item">{{item}}</div>
   </div>
 </template>
 
