@@ -13,15 +13,10 @@ Vue.config.productionTip = false
 store.state.router = router
 Vue.prototype.xxxx = 1
 
-/* eslint-disable no-new */
-let vm = new Vue({
+new Vue({
     el: '#app',
     store,
     router,
     components: { App },
     template: '<App/>'
-})
-
-Vue.use({
-    vm
 })
