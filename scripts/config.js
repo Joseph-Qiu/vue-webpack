@@ -5,7 +5,7 @@ module.exports = {
         host: '0.0.0.0',
         port: 7300,
         proxyTable: {
-            '/api':{
+            '/gateway':{
                 target: 'http://127.0.0.1:7304',
                 changeOrigin: true,
             }

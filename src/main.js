@@ -13,6 +13,11 @@ Vue.use(ElementUI);
 Vue.config.productionTip = false;
 store.state.router = router;
 
+// import Ajax from 'utils/ajax'
+// Ajax.post({
+//     url: "/gateway/get_ft_list"
+// })
+
 new Vue({
     el: '#app',
     store,

@@ -27,7 +27,7 @@ deleteFolder() {
 	fi
 }
 
-# 开发，测试环境, 拷贝html目录到静态目录
+# 拷贝html目录到静态目录
 copyHtml() {
     ##deleteFolder scripts/templates/www
 	cp -r static scripts/templates/www
@@ -62,7 +62,7 @@ fi
 if [ $1 == "dev" ]
 then
 	copyHtml
-	node scripts/build/conf.js $1 ${2} ${3}
+	node scripts/build/conf.js $1
 	node scripts/build/html.js
 	npm run dev
 fi
